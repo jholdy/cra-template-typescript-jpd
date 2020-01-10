@@ -1,5 +1,5 @@
 {
-  "name": "cra-template-typescript",
+  "name": "cra-template-typescript-jpd",
   "version": "1.0.0",
   "keywords": [
     "react",
@@ -7,19 +7,18 @@
     "template",
     "typescript"
   ],
-  "description": "The base TypeScript template for Create React App.",
+  "description": "The base TypeScript template for Create React App by Jholdy.",
   "main": "template.json",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/create-react-app.git",
-    "directory": "packages/cra-template-typescript"
+    "url": "https://github.com/jholdy/cra-template-typescript-jdp"
   },
   "license": "MIT",
   "engines": {
     "node": ">=8.10"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/jholdy/cra-template-typescript-jdp/issues"
   },
   "files": [
     "template",
