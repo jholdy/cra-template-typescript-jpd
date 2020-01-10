@@ -29,8 +29,4 @@ class AppStoreProvider extends PureComponent {
   }
 }
 
-AppStoreProvider.propTypes = {
-  children: PropTypes.shape({}).isRequired
-};
-
 export default AppStoreProvider;

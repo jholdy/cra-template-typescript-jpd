@@ -1,5 +1,6 @@
 import { createReducer } from "reduxsauce";
 import creator from "../util";
+import IUser from "../../interfaces/IUser";
 
 export const Types = {
   GET_REQUEST: "GET_REQUEST_LOGIN",
@@ -9,7 +10,7 @@ export const Types = {
 };
 
 export const Creators = {
-  getRequest: creator(Types.GET_REQUEST),
+  getRequest: creator<IUser>(Types.GET_REQUEST),
   getSuccess: creator(Types.GET_SUCCESS),
   getFailure: creator(Types.GET_FAILURE),
   getLogout: creator(Types.GET_LOGOUT_REQUEST)
@@ -27,14 +28,14 @@ const request = (state = initialState) => ({
   error: null
 });
 
-const success = (state = initialState, action) => ({
+const success = (state = initialState, action: any) => ({
   ...state,
   ...action.payload,
   loading: false,
   error: null
 });
 
-const failure = (state = initialState, action) => ({
+const failure = (state = initialState, action: any) => ({
   ...state,
   ...action.payload,
   loading: false

@@ -1,8 +1,6 @@
-import { create } from "apisauce";
+import axios from "axios";
 
-const api = create({
-  baseURL: "https://localhost",
-  timeout: 50
-});
+axios.defaults.baseURL = "https://localhost";
+const api = axios;
 
 export default api;

@@ -13,9 +13,11 @@ const persistConfig = {
   timeout: 0
 };
 
-const sagaMonitor =
-  process.env.NODE_ENV === "development"
-    ? Reactotron.createSagaMonitor()
+const { createSagaMonitor, createEnhancer } = Reactotron;
+
+const sagaMonitor: any =
+  process.env.NODE_ENV === "development" && createSagaMonitor
+    ? createSagaMonitor()
     : null;
 const sagaMiddleware = createSagaMiddleware({ sagaMonitor });
 
@@ -23,8 +25,8 @@ const persistedReducer = persistReducer(persistConfig, reducers);
 const middlewares = [sagaMiddleware];
 
 const createCompose =
-  process.env.NODE_ENV === "development"
-    ? compose(applyMiddleware(...middlewares), Reactotron.createEnhancer())
+  process.env.NODE_ENV === "development" && createEnhancer
+    ? compose(applyMiddleware(...middlewares), createEnhancer())
     : compose(applyMiddleware(...middlewares));
 
 export default () => {
