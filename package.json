@@ -1,6 +1,6 @@
 {
   "name": "cra-template-typescript-jpd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "react",
     "create-react-app",
@@ -11,14 +11,14 @@
   "main": "template.json",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jholdy/cra-template-typescript-jdp"
+    "url": "https://github.com/jholdy/cra-template-typescript-jpd"
   },
   "license": "MIT",
   "engines": {
     "node": ">=8.10"
   },
   "bugs": {
-    "url": "https://github.com/jholdy/cra-template-typescript-jdp/issues"
+    "url": "https://github.com/jholdy/cra-template-typescript-jpd/issues"
   },
   "files": [
     "template",
